@@ -1,0 +1,2 @@
+2023-06-21 18:59:38,845 -- __main__ -- INFO -- run tshark from input.pcap to creat json
+2023-06-21 19:01:31,076 -- __main__ -- INFO -- run Suricata to reassemble flows and create alert logs
