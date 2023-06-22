@@ -18,3 +18,23 @@
 21/6/2023 -- 19:01:30 - <Notice> - Pcap-file module read 1 files, 939 packets, 1252107 bytes
 21/6/2023 -- 19:01:30 - <Info> - Alerts: 660
 21/6/2023 -- 19:01:30 - <Info> - cleaning up signature grouping structure... complete
+22/6/2023 -- 15:10:26 - <Notice> - This is Suricata version 6.0.1 RELEASE running in USER mode
+22/6/2023 -- 15:10:26 - <Info> - CPUs/cores online: 4
+22/6/2023 -- 15:10:26 - <Info> - fast output device (regular) initialized: fast.log
+22/6/2023 -- 15:10:26 - <Info> - eve-log output device (regular) initialized: eve.json
+22/6/2023 -- 15:10:26 - <Info> - stats output device (regular) initialized: stats.log
+22/6/2023 -- 15:10:38 - <Info> - 1 rule files processed. 34088 rules successfully loaded, 0 rules failed
+22/6/2023 -- 15:10:38 - <Info> - Threshold config parsed: 0 rule(s) found
+22/6/2023 -- 15:10:39 - <Info> - 34091 signatures processed. 1270 are IP-only rules, 5214 are inspecting packet payload, 27407 inspect application layer, 104 are decoder event only
+22/6/2023 -- 15:11:33 - <Info> - Using unix socket file '/var/run/suricata-command.socket'
+22/6/2023 -- 15:11:33 - <Warning> - [ERRCODE: SC_ERR_INITIALIZATION(45)] - Unix socket: UNIX socket bind(/var/run/suricata-command.socket) error: Address already in use
+22/6/2023 -- 15:11:33 - <Warning> - [ERRCODE: SC_ERR_INITIALIZATION(45)] - Unable to create unix command socket
+22/6/2023 -- 15:11:33 - <Notice> - all 5 packet processing threads, 4 management threads initialized, engine started.
+22/6/2023 -- 15:11:33 - <Info> - Starting file run for /home/benjamin/Folders_Python/Cyber/data/input_pcaps/input.pcap
+22/6/2023 -- 15:11:33 - <Info> - pcap file /home/benjamin/Folders_Python/Cyber/data/input_pcaps/input.pcap end of file reached (pcap err code 0)
+22/6/2023 -- 15:11:33 - <Notice> - Signal Received.  Stopping engine.
+22/6/2023 -- 15:11:33 - <Info> - time elapsed 0.086s
+22/6/2023 -- 15:11:33 - <Warning> - [ERRCODE: SC_ERR_INVALID_CHECKSUM(11)] - 1/1th of packets have an invalid checksum, consider setting pcap-file.checksum-checks variable to no or use '-k none' option on command line.
+22/6/2023 -- 15:11:33 - <Notice> - Pcap-file module read 1 files, 939 packets, 1252107 bytes
+22/6/2023 -- 15:11:33 - <Info> - Alerts: 660
+22/6/2023 -- 15:11:33 - <Info> - cleaning up signature grouping structure... complete
