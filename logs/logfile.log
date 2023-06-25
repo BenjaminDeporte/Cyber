@@ -1,3 +1,2 @@
-2023-06-24 20:40:22,429 -- __main__ -- INFO -- -------- new run --------
-2023-06-24 20:40:48,416 -- __main__ -- INFO -- run tshark to create json translation of input.pcap
-2023-06-24 20:42:48,972 -- __main__ -- INFO -- run Suricata to reassemble flows and create alert logs
+2023-06-25 12:40:25,909 -- __main__ -- INFO -- -------- new run --------
+2023-06-25 12:41:55,024 -- __main__ -- INFO -- run Suricata to reassemble flows and create alert logs
