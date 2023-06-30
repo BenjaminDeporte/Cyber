@@ -1,1 +1,2 @@
-2023-06-28 17:15:39,629 -- __main__ -- INFO -- -------- new run --------
+2023-06-30 09:23:46,656 -- __main__ -- INFO -- -------- new run --------
+2023-06-30 09:25:19,832 -- __main__ -- INFO -- run Suricata to reassemble flows and create alert logs
