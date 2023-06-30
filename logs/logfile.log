@@ -1,6 +1,2 @@
-2023-06-30 18:32:11,355 -- __main__ -- INFO -- -------- new run --------
-2023-06-30 18:42:05,549 -- __main__ -- INFO -- reached end of capture after reading 139 packets
-2023-06-30 18:42:22,134 -- __main__ -- INFO -- reached end of capture after reading 0 packets
-2023-06-30 18:42:48,556 -- __main__ -- INFO -- reached end of capture after reading 140 packets
-2023-06-30 18:43:16,761 -- __main__ -- INFO -- reached end of capture after reading 0 packets
-2023-06-30 18:43:33,875 -- __main__ -- INFO -- reached end of capture after reading 141 packets
+2023-06-30 18:59:11,136 -- __main__ -- INFO -- -------- new run --------
+2023-06-30 18:59:16,206 -- __main__ -- INFO -- reached end of capture after reading 140 packets
