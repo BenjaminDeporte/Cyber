@@ -31,6 +31,11 @@ logger.info("-------- new run --------")
 class PyPacket():
     """Wrapper for PyShark packet. Creates a dictionnary with ETH, IP, TCP, UDP data if/when present.
     NB : use_ek = False.
+    
+    Methods :
+    __init__    :   the constructor takes a PyShark packet object
+    data        :   returns a dictonnary, whose keys are 'ETH', 'IP', 'TCP', 'UDP'
+    dataframe   :   returns a Pandas dataframe with all key,value pairs in the dictionnary data     
     """
     
     MAP = {
