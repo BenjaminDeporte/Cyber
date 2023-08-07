@@ -14,9 +14,10 @@ OTHER NOTEBOOKS:
 1. Toy_pyshark.ipynb is a Jupyter NB with a minimal tutorial of the PyPacket class (in the cyberlib.py library).  Toy_pyshark is the *.py version, without the asyncio fix.
 2. Toy_scapy.ipynb was an attempt to get my hands on Scapy. Proved to be too complicated for me.
 3. Traitement_dataframes.ipynb is the notebook to run some unsupervised learning experiments out of Pandas dataframes. (It is required to run toy_pyshark.ipynb first to create a specific dataframe out of the *.pcap file)
+4. network_graph is a utility notebook to draw the graph of IP conversations in a network.
 
 NEXT (possibly):
 1. Generic pipeline for EDA on any *.pcap file
-2. Network trafic viz and EDA with NetworkX
+2. DONE : Network trafic viz and EDA with NetworkX
 3. Some anomaly detection code (inc. graph ?)
 4. A PySpark-based code to handle live pcap stream

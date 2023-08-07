@@ -1,0 +1,2 @@
+2023-08-07 17:36:00,980 -- __main__ -- INFO -- -------- new run --------
+2023-08-07 17:36:01,014 -- __main__ -- INFO -- -- created a capture object in PyShark with pcap file = /home/benjamin/Folders_Python/Cyber/data/input_pcaps/smallFlows.pcap --
