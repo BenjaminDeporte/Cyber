@@ -1,4 +1,2 @@
-2023-08-07 18:39:26,619 -- cyberlib -- INFO -- -------- new run --------
 2023-08-07 18:39:26,631 -- cyberlib -- INFO -- -------- new run --------
 2023-08-07 18:39:26,670 -- cyberlib -- INFO -- -- created a capture object in PyShark with pcap file = /home/benjamin/Folders_Python/Cyber/data/input_pcaps/test.pcap --
-2023-08-07 18:41:34,888 -- cyberlib -- DEBUG -- Instantiated PyPacket object

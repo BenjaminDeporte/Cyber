@@ -90,3 +90,39 @@ class PyPacket():
             self._dataframe = pd.DataFrame(data=dict_for_data, index=[0])
             logger.debug("created a dataframe out of a PyPacket object")
             return self._dataframe
+        
+class GetLogger():
+    """Utility class to return a logger
+
+    Args:
+        log_filename (str, optional): full path to the log file. Defaults to 'logfile.log'.
+    """
+    
+    def __init__(self, log_filename='/home/benjamin/Folders_Python/Cyber/logs/logfile.log'):
+        self._log_filename = log_filename
+        
+    def get_custom_logger(self):
+        
+        # logging set-up for debugging purposes
+        LOG_FORMAT = '%(asctime)% -- %(name)s -- %(levelname)s -- %(message)s'
+        # LOG_LEVEL = logging.INFO
+
+        # specific logger for the module
+        logger = logging.getLogger(__name__)   # creates specific logger for the module
+        logger.setLevel(logging.DEBUG)    # entry level of messages from all handlers
+        LOG_FORMAT = '%(asctime)s -- %(name)s -- %(levelname)s -- %(message)s'
+        formatter = logging.Formatter(LOG_FORMAT)
+
+        # file handler to log everything
+        file_handler = logging.FileHandler(self._log_filename, mode='w')
+        file_handler.setLevel(logging.INFO)  # all messages (DEBUG and up) get logged in the file
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
+
+        # stream handler to show messages to the console
+        console = logging.StreamHandler()
+        console.setLevel(logging.WARNING)  # Warning messages and up get displayed to the console
+        console.setFormatter(formatter)
+        logger.addHandler(console)
+
+        return logger
