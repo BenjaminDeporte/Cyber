@@ -1,2 +1,2 @@
-2023-08-08 09:25:41,362 -- cyberlib -- INFO -- -------- new run --------
-2023-08-08 09:25:41,403 -- cyberlib -- INFO -- -- created a capture object in PyShark with pcap file = /home/benjamin/Folders_Python/Cyber/data/input_pcaps/test.pcap --
+2023-08-08 11:34:09,847 -- cyberlib -- INFO -- -------- new run --------
+2023-08-08 11:34:09,916 -- cyberlib -- INFO -- -- created a capture object in PyShark with pcap file = /home/benjamin/Folders_Python/Cyber/data/input_pcaps/smallFlows.pcap --

@@ -152,14 +152,15 @@ class GetTCPDataframeFromFileCapture():
                         df = pd.concat([df, add_df])
                         
             # transforms variables into right type
+            columns_to_leave_asis = ['ETH_dst', 'ETH_src',  'IP_id', 'IP_flags', 'IP_src', 'IP_dst'] # we leave those as raw
             columns_to_discard = ['TCP_payload','UDP_payload', 'ETH_type', 'UDP_srcport', 'UDP_dstport', 'UDP_length', 'UDP_stream', 'UDP_time_relative', 'UDP_time_delta']
-            columns_to_encode_as_ordinal = ['ETH_dst', 'ETH_src',  'IP_id', 'IP_flags', 'IP_src', 'IP_dst', 'TCP_flags']
+            columns_to_encode_as_ordinal = ['TCP_flags']  # we leave 'ETH_dst', 'ETH_src',  'IP_id', 'IP_flags', 'IP_src', 'IP_dst' as raw
             columns_to_cast_as_float = ['IP_version', 'IP_hdr_len', 'IP_len', 'IP_ttl', 'IP_proto',
                                         'TCP_srcport', 'TCP_dstport', 'TCP_stream', 'TCP_len', 'TCP_seq',
                                         'TCP_ack', 'TCP_hdr_len', 'TCP_time_relative', 'TCP_time_delta']
             columns_to_cast_as_datetime = ['TIMESTAMP_ts']
                   
-            df_ord = pd.DataFrame()
+            df_ord = df[columns_to_leave_asis].reset_index(drop=True)
 
             for c in columns_to_encode_as_ordinal:
                 df1, uniques = pd.factorize(df[c])
