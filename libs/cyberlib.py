@@ -126,3 +126,66 @@ class GetLogger():
         logger.addHandler(console)
 
         return logger
+    
+class GetTCPDataframeFromFileCapture():
+    """Extract a Dataframe with TCP-only packets out of a File Capture object
+    """
+    def __init__(self, filecapture=None):
+        if filecapture == None:
+            msg = f'Trying to instantiate a GetTCPDataframe object without a file capture'
+            logger.error(msg)
+            raise NameError(msg)
+        self._filecapture = filecapture
+        self._dataframe = None
+        
+    @property
+    def dataframe(self):
+        if self._dataframe:
+            return self._dataframe
+        else:
+            # create the dataframe with the features out of packets part of TCP conversations only
+            df = None
+            for pkt in self._filecapture:
+                if pkt['ETH'].type == '0x00000800':  # test whether the Ethernet packet is part of an IP conversation
+                    if pkt['IP'].proto == '6':  # test whether the pcaket is part of a TCP conversation
+                        add_df = PyPacket(pkt).dataframe
+                        df = pd.concat([df, add_df])
+                        
+            # transforms variables into right type
+            columns_to_discard = ['TCP_payload','UDP_payload', 'ETH_type', 'UDP_srcport', 'UDP_dstport', 'UDP_length', 'UDP_stream', 'UDP_time_relative', 'UDP_time_delta']
+            columns_to_encode_as_ordinal = ['ETH_dst', 'ETH_src',  'IP_id', 'IP_flags', 'IP_src', 'IP_dst', 'TCP_flags']
+            columns_to_cast_as_float = ['IP_version', 'IP_hdr_len', 'IP_len', 'IP_ttl', 'IP_proto',
+                                        'TCP_srcport', 'TCP_dstport', 'TCP_stream', 'TCP_len', 'TCP_seq',
+                                        'TCP_ack', 'TCP_hdr_len', 'TCP_time_relative', 'TCP_time_delta']
+            columns_to_cast_as_datetime = ['TIMESTAMP_ts']
+                  
+            df_ord = pd.DataFrame()
+
+            for c in columns_to_encode_as_ordinal:
+                df1, uniques = pd.factorize(df[c])
+                df_sup = pd.DataFrame(data={ c : list(df1) })
+                df_ord = pd.concat([df_ord, df_sup], axis=1)
+                
+            # print(df_ord)
+                
+            df_float = df[columns_to_cast_as_float].astype('float').reset_index(drop=True)
+            
+            # print(df_float)
+            
+            df_ts = df[columns_to_cast_as_datetime].reset_index(drop=True)
+            
+            # print(df_ts)
+            
+            df_recast = pd.concat([df_ord, df_float, df_ts], axis=1)
+            df_recast.set_index('TIMESTAMP_ts')
+            
+            # just TCP
+            df_tcp = df_recast.dropna(subset=['TCP_time_relative'])
+            columns_present_to_discard = [ c for c in columns_to_discard if c in df_tcp.columns ]
+            df_tcp.drop(columns=columns_present_to_discard, inplace=True)
+            
+            self._dataframe = df_tcp.copy()
+            return self._dataframe
+
+
+    
