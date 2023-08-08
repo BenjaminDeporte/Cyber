@@ -1,5 +1,6 @@
 import logging
 import pandas as pd
+from tqdm import tqdm
 
 # basic library for reuse
 
@@ -145,7 +146,7 @@ class GetTCPDataframeFromFileCapture():
         else:
             # create the dataframe with the features out of packets part of TCP conversations only
             df = None
-            for pkt in self._filecapture:
+            for pkt in tqdm(self._filecapture):
                 if pkt['ETH'].type == '0x00000800':  # test whether the Ethernet packet is part of an IP conversation
                     if pkt['IP'].proto == '6':  # test whether the pcaket is part of a TCP conversation
                         add_df = PyPacket(pkt).dataframe
