@@ -147,8 +147,17 @@ class GetTCPDataframeFromFileCapture():
             # create the dataframe with the features out of packets part of TCP conversations only
             df = None
             for pkt in tqdm(self._filecapture):
-                if pkt['ETH'].type == '0x00000800':  # test whether the Ethernet packet is part of an IP conversation
-                    if pkt['IP'].proto == '6':  # test whether the pcaket is part of a TCP conversation
+                string_type = pkt.ETH.Type
+                if isinstance(string_type, str) is False:
+                    logger.error('Error in one packet : pkt.ETH.Type is not a string')
+                    continue
+                try:
+                    num_type = int(string_type, base=16)
+                except TypeError as err:
+                    logger.error(f'Hum. Can not convert string = {string_type} from Hexa to int')
+                    continue
+                if num_type == 2048:  # test whether the Ethernet packet is part of an IP conversation, allows for variable length strings
+                    if pkt.IP.proto == '6':  # test whether the pcaket is part of a TCP conversation
                         add_df = PyPacket(pkt).dataframe
                         df = pd.concat([df, add_df])
                         
