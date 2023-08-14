@@ -1,2 +1,10 @@
-2023-08-14 11:40:52,586 -- cyberlib -- INFO -- -------- new run --------
-2023-08-14 11:57:11,532 -- cyberlib -- INFO -- -------- new run --------
+2023-08-14 15:57:00,677 -- cyberlib -- INFO -- -------- new run --------
+2023-08-14 15:57:01,313 -- cyberlib -- INFO -- -------- new run --------
+2023-08-14 15:57:15,780 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
+2023-08-14 15:57:26,169 -- cyberlib -- INFO -- read an existing dataframe for unsupervised learning
+2023-08-14 15:59:12,728 -- cyberlib -- INFO -- -------- new run --------
+2023-08-14 15:59:14,814 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
+2023-08-14 15:59:17,681 -- cyberlib -- INFO -- created and wrote a dataframe for unsupervised learning
+2023-08-14 16:01:17,736 -- cyberlib -- INFO -- -------- new run --------
+2023-08-14 16:01:26,832 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
+2023-08-14 16:01:30,661 -- cyberlib -- INFO -- created and wrote a dataframe for unsupervised learning
