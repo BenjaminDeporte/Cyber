@@ -1,3 +1,3 @@
-2023-08-17 17:52:56,249 -- cyberlib -- INFO -- -------- new run --------
-2023-08-17 17:52:58,318 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
-2023-08-17 17:52:59,123 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
+2023-08-21 18:07:47,580 -- cyberlib -- INFO -- -------- new run --------
+2023-08-21 18:07:50,129 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
+2023-08-21 18:07:50,695 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
