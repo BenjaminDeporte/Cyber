@@ -1,16 +1,11 @@
-2023-08-22 06:50:21,452 -- cyberlib -- INFO -- -------- new run --------
-2023-08-22 06:50:21,462 -- cyberlib -- INFO -- -------- new run --------
-2023-08-22 06:50:21,870 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
-2023-08-22 06:50:22,180 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
-2023-08-22 06:50:57,002 -- cyberlib -- INFO -- -------- new run --------
-2023-08-22 06:50:59,804 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
-2023-08-22 06:51:00,399 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
-2023-08-22 06:51:23,041 -- cyberlib -- INFO -- -------- new run --------
-2023-08-22 06:51:23,875 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
-2023-08-22 06:51:24,188 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
-2023-08-22 06:52:10,064 -- cyberlib -- INFO -- -------- new run --------
-2023-08-22 06:52:10,707 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
-2023-08-22 06:52:11,048 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
-2023-08-22 06:53:55,447 -- cyberlib -- INFO -- -------- new run --------
-2023-08-22 06:55:23,834 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
-2023-08-22 06:55:29,888 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
+2023-09-11 17:39:08,219 -- cyberlib -- INFO -- -------- new run --------
+2023-09-11 17:39:08,236 -- cyberlib -- INFO -- -------- new run --------
+2023-09-11 17:39:10,538 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
+2023-09-11 17:39:40,147 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
+2023-09-11 17:39:40,526 -- cyberlib -- INFO -- Found 54 alert(s) in *.json
+2023-09-11 17:39:40,527 -- cyberlib -- INFO -- Found 250 anomalie(s) in *.json
+2023-09-11 17:40:23,580 -- cyberlib -- INFO -- -------- new run --------
+2023-09-11 17:41:43,997 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
+2023-09-11 17:42:28,446 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
+2023-09-11 17:42:34,121 -- cyberlib -- INFO -- Found 218 alert(s) in *.json
+2023-09-11 17:42:34,121 -- cyberlib -- INFO -- Found 3926 anomalie(s) in *.json
