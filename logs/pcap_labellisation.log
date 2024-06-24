@@ -1,10 +1,2 @@
-2023-09-11 17:40:23,580 -- cyberlib -- INFO -- -------- new run --------
-2023-09-11 17:41:43,997 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
-2023-09-11 17:42:28,446 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
-2023-09-11 17:42:34,121 -- cyberlib -- INFO -- Found 218 alert(s) in *.json
-2023-09-11 17:42:34,121 -- cyberlib -- INFO -- Found 3926 anomalie(s) in *.json
-23-09-11 17:40:23,580 -- cyberlib -- INFO -- -------- new run --------
-2023-09-11 17:41:43,997 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
-2023-09-11 17:42:28,446 -- cyberlib -- INFO -- Executed successfully *.pcap to EVE.json translation with suricata
-2023-09-11 17:42:34,121 -- cyberlib -- INFO -- Found 218 alert(s) in *.json
-2023-09-11 17:42:34,121 -- cyberlib -- INFO -- Found 3926 anomalie(s) in *.json
+2024-06-24 06:59:39,350 -- cyberlib -- INFO -- -------- new run --------
+2024-06-24 06:59:53,714 -- cyberlib -- INFO -- Executed successfully *.pcap to *.csv translation with tshark
