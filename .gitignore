@@ -2,4 +2,5 @@ data/
 data/input_pcaps/
 data/outputs/
 data/dataframes/
-
+data/LANL_raw/
+data/LANL_processed/
